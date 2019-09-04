@@ -1,3 +1,4 @@
 require('dotenv').config()
 
-console.log('Project Running')
+// aws services
+require('./services/s3')
