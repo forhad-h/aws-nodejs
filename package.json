@@ -1,0 +1,28 @@
+{
+  "name": "aws-nodejs",
+  "version": "1.0.0",
+  "description": "Practice in AWS with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forhad-h/aws-nodejs.git"
+  },
+  "keywords": [
+    "Node.js",
+    "AWS"
+  ],
+  "author": "Forhad Hosain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forhad-h/aws-nodejs/issues"
+  },
+  "homepage": "https://github.com/forhad-h/aws-nodejs#readme",
+  "dependencies": {
+    "aws-sdk": "^2.522.0",
+    "dotenv": "^8.1.0",
+    "uuid": "^3.3.3"
+  }
+}
