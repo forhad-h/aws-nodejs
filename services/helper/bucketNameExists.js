@@ -1,7 +1,7 @@
-const getAllData = require('../../sqliteOperations/getAllData')
+const getData = require('../../sqliteOperations/getData')
 
-module.exports = async bucketPrefix => {
-  const rows = await getAllData('aws_s3_data')
+module.exports = async (tableName, bucketPrefix) => {
+  const rows = await getData(`SELECT * FROM ${tableName}`)
 
   if (Array.isArray(rows)) {
     const pattern = new RegExp(`^${bucketPrefix}`)

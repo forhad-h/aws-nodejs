@@ -1,8 +1,8 @@
 const db = require('./db')
 
-module.exports = tableName => {
+module.exports = query => {
   return new Promise((resolve, reject) => {
-    db.all(`SELECT * FROM ${tableName}`, (err, rows) => {
+    db.all(query, (err, rows) => {
       if (err) reject(err)
       resolve(rows)
     })
