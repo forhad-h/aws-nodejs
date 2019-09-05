@@ -27,5 +27,9 @@ const params = {
 }
 ;(async () => {
   // get status
+  /*
+     Source and ToAddresses Must be verified in
+     AWS SES console when the account is in sandbox status
+  */
   console.log(await SES.sendEmail(params).promise())
 })()
