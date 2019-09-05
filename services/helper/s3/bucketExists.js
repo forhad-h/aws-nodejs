@@ -1,8 +1,6 @@
 const AWS = require('aws-sdk')
 
-const getAllData = require('../../sqliteOperations/getData')
-
-const S3 = new AWS.S3(process.env.AWS_API_VERSION)
+const S3 = new AWS.S3()
 
 module.exports = async bucketName => {
   try {

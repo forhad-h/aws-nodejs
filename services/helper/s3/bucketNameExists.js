@@ -1,4 +1,4 @@
-const getData = require('../../sqliteOperations/getData')
+const getData = require('../../../sqliteOperations/getData')
 
 module.exports = async (tableName, bucketPrefix) => {
   const rows = await getData(`SELECT * FROM ${tableName}`)

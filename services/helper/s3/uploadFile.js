@@ -7,7 +7,7 @@ const rootDir = path.dirname(
 )
 const img = `${rootDir}/images/img1.png`
 
-const S3 = new AWS.S3(process.env.AWS_API_VERSION)
+const S3 = new AWS.S3()
 const keyName = `test-${Date.now()}.png`
 
 module.exports = async bucketName => {
@@ -20,7 +20,9 @@ module.exports = async bucketName => {
   }
   try {
     await S3.putObject(paramsSet).promise()
-    return `https://${bucketName}.s3.amazonaws.com/${keyName}`
+    return `https://${bucketName}.s3-${
+      process.env.AWS_S3_REGION
+    }.amazonaws.com/${keyName}`
   } catch (err) {
     console.error(err, err.stack)
     return false
